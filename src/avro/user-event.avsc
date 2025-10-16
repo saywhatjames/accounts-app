@@ -1,0 +1,39 @@
+{
+  "type": "record",
+  "name": "UserEvent",
+  "namespace": "demo",
+  "fields": [
+    {
+      "name": "id",
+      "type": "string"
+    },
+    {
+      "name": "type",
+      "type": {
+        "type": "enum",
+        "name": "EventType",
+        "symbols": ["SIGNUP", "LOGIN", "PURCHASE"]
+      }
+    },
+    {
+      "name": "timestamp",
+      "type": "long",
+      "logicalType": "timestamp-millis"
+    },
+    {
+      "name": "payload",
+      "type": [
+        "null",
+        {
+          "type": "record",
+          "name": "Payload",
+          "fields": [
+            { "name": "amount", "type": ["null", "double"], "default": null },
+            { "name": "notes", "type": ["null", "string"], "default": null }
+          ]
+        }
+      ],
+      "default": null
+    }
+  ]
+}

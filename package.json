@@ -1,50 +1,18 @@
 {
-  "name": "cibc-app",
-  "version": "0.0.0",
-  "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "watch": "ng build --watch --configuration development",
-    "test": "ng test",
-    "storybook": "ng run cibc-app:storybook",
-    "build-storybook": "ng run cibc-app:build-storybook"
-  },
-  "private": true,
-  "dependencies": {
-    "@angular/animations": "^15.0.0",
-    "@angular/common": "^15.0.0",
-    "@angular/compiler": "^15.0.0",
-    "@angular/core": "^15.0.0",
-    "@angular/forms": "^15.0.0",
-    "@angular/platform-browser": "^15.0.0",
-    "@angular/platform-browser-dynamic": "^15.0.0",
-    "@angular/router": "^15.0.0",
-    "rxjs": "~7.5.0",
-    "tslib": "^2.3.0",
-    "zone.js": "~0.12.0"
-  },
-  "devDependencies": {
-    "@angular-devkit/build-angular": "^15.0.4",
-    "@angular/cli": "~15.0.4",
-    "@angular/compiler-cli": "^15.0.0",
-    "@chromatic-com/storybook": "^1.5.0",
-    "@compodoc/compodoc": "^1.1.25",
-    "@storybook/addon-docs": "^8.1.10",
-    "@storybook/addon-essentials": "^8.1.10",
-    "@storybook/addon-interactions": "^8.1.10",
-    "@storybook/addon-links": "^8.1.10",
-    "@storybook/angular": "^8.1.10",
-    "@storybook/blocks": "^8.1.10",
-    "@storybook/test": "^8.1.10",
-    "@types/jasmine": "~4.3.0",
-    "jasmine-core": "~4.5.0",
-    "karma": "~6.4.0",
-    "karma-chrome-launcher": "~3.1.0",
-    "karma-coverage": "~2.2.0",
-    "karma-jasmine": "~5.1.0",
-    "karma-jasmine-html-reporter": "~2.0.0",
-    "storybook": "^8.1.10",
-    "typescript": "~4.8.2"
-  }
+"name": "nodejs-kafka-producer-consumer",
+"version": "1.0.2",
+"scripts": {
+"produce": "node src/producer.js",
+"consume": "node src/consumer.js",
+"start": "node src/index.js"
+},
+"dependencies": {
+"avsc": "^5.7.7",
+"dotenv": "^16.4.5",
+"kafkajs": "^2.2.4",
+"@kafkajs/confluent-schema-registry": "^3.7.0"
+},
+"engines": {
+"node": ">=16.14.0"
+}
 }
