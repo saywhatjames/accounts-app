@@ -1,0 +1,23 @@
+# Kafka bootstrap servers (comma separated)
+KAFKA_BROKERS=localhost:9092
+KAFKA_CLIENT_ID=nodejs-kafka-app
+
+
+# Security (for managed clusters)
+KAFKA_SSL=false
+KAFKA_SASL_MECHANISM=
+KAFKA_SASL_USERNAME=
+KAFKA_SASL_PASSWORD=
+
+
+# Topics
+KAFKA_PRODUCE_TOPIC=demo.user.events
+KAFKA_CONSUME_TOPIC=demo.user.events
+KAFKA_GROUP_ID=demo-user-events-group
+
+
+# Schema Registry (optional)
+USE_AVRO=false
+SCHEMA_REGISTRY_URL=
+SCHEMA_REGISTRY_USERNAME=
+SCHEMA_REGISTRY_PASSWORD=
